@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome\n\n\nHello and welcome to the documentation of Alex's Door System!\nHere you'll find more information\nabout every aspect of the asset as well as a Quick-Start guide, an FAQ-section and a Support and Contact section.\n\n\n\n\nQuick-Start\n\n\nFAQ\n\n\nSupport and Contact\n\n\n[Write a Review] (https://www.assetstore.unity3d.com/en/#!/account/downloads/search=Doors%20Free)",
+            "text": "Welcome\n\n\nHello and welcome to the documentation of Alex's Door System!\nHere you'll find more information\nabout every aspect of the asset as well as a Quick-Start guide, an FAQ-section and a Support and Contact section.\n\n\n\n\nQuick-Start\n\n\nFAQ\n\n\nSupport and Contact\n\n\nWrite a Review",
             "title": "Welcome"
         },
         {
             "location": "/#welcome",
-            "text": "Hello and welcome to the documentation of Alex's Door System!\nHere you'll find more information\nabout every aspect of the asset as well as a Quick-Start guide, an FAQ-section and a Support and Contact section.   Quick-Start  FAQ  Support and Contact  [Write a Review] (https://www.assetstore.unity3d.com/en/#!/account/downloads/search=Doors%20Free)",
+            "text": "Hello and welcome to the documentation of Alex's Door System!\nHere you'll find more information\nabout every aspect of the asset as well as a Quick-Start guide, an FAQ-section and a Support and Contact section.   Quick-Start  FAQ  Support and Contact  Write a Review",
             "title": "Welcome"
         },
         {
