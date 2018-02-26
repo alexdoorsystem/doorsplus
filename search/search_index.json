@@ -132,12 +132,12 @@
         },
         {
             "location": "/doorsound/",
-            "text": "Door Sound",
+            "text": "Door Sound\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\nif\n \n(\nAngleConvention\n \n==\n \n0\n)\n \n// Alex's Door System Convention\n\n\n{\n\n    \nSwingStart\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \n-\nCurrentRotationBlock\n.\nFrontAngle\n,\n \n0\n);\n\n    \nSwingMid\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \n-\nCurrentRotationBlock\n.\nMiddleAngle\n,\n \n0\n);\n\n    \nSwingEnd\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \n-\nCurrentRotationBlock\n.\nBackAngle\n,\n \n0\n);\n\n\n}\n\n\n\nelse\n \nif\n \n(\nAngleConvention\n \n==\n \n1\n)\n \n// Unity Convention\n\n\n{\n\n    \nSwingStart\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \nCurrentRotationBlock\n.\nFrontAngle\n,\n \n0\n);\n\n    \nSwingMid\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \nCurrentRotationBlock\n.\nMiddleAngle\n,\n \n0\n);\n\n    \nSwingEnd\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \nCurrentRotationBlock\n.\nBackAngle\n,\n \n0\n);\n\n\n}",
             "title": "Door Sound"
         },
         {
             "location": "/doorsound/#door-sound",
-            "text": "",
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13 if   ( AngleConvention   ==   0 )   // Alex's Door System Convention  { \n     SwingStart   =   Quaternion . Euler ( 0 ,   - CurrentRotationBlock . FrontAngle ,   0 ); \n     SwingMid   =   Quaternion . Euler ( 0 ,   - CurrentRotationBlock . MiddleAngle ,   0 ); \n     SwingEnd   =   Quaternion . Euler ( 0 ,   - CurrentRotationBlock . BackAngle ,   0 );  }  else   if   ( AngleConvention   ==   1 )   // Unity Convention  { \n     SwingStart   =   Quaternion . Euler ( 0 ,   CurrentRotationBlock . FrontAngle ,   0 ); \n     SwingMid   =   Quaternion . Euler ( 0 ,   CurrentRotationBlock . MiddleAngle ,   0 ); \n     SwingEnd   =   Quaternion . Euler ( 0 ,   CurrentRotationBlock . BackAngle ,   0 );  }",
             "title": "Door Sound"
         },
         {
