@@ -211,15 +211,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#angle-settings" title="Angle Settings" class="md-nav__link">
-    Angle Settings
+  <a href="#door-tab" title="Door Tab" class="md-nav__link">
+    Door Tab
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#speed-curves" title="Speed Curves" class="md-nav__link">
-    Speed Curves
+  <a href="#rotation-settings" title="Rotation Settings" class="md-nav__link">
+    Rotation Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotation-curves" title="Rotation Curves" class="md-nav__link">
+    Rotation Curves
   </a>
   
 </li>
@@ -326,15 +333,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#angle-settings" title="Angle Settings" class="md-nav__link">
-    Angle Settings
+  <a href="#door-tab" title="Door Tab" class="md-nav__link">
+    Door Tab
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#speed-curves" title="Speed Curves" class="md-nav__link">
-    Speed Curves
+  <a href="#rotation-settings" title="Rotation Settings" class="md-nav__link">
+    Rotation Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotation-curves" title="Rotation Curves" class="md-nav__link">
+    Rotation Curves
   </a>
   
 </li>
@@ -355,8 +369,42 @@
                 
                 
                 <h1 id="door-rotation"><strong>Door Rotation</strong></h1>
-<h2 id="angle-settings"><strong>Angle Settings</strong></h2>
-<h2 id="speed-curves"><strong>Speed Curves</strong></h2>
+<p>The rotation component of the door is where you actually control what rotations the door has to perform. In the component
+itself, you have 2 tabs. You have a 'Door' tab and a 'Rotations' tab.</p>
+<p><img alt="Rotation Component" src="../img/rotationcomponent.png" /></p>
+<h2 id="door-tab"><strong>Door Tab</strong></h2>
+<p>In the door tab you have the options to set the door parameters. First you'll have to
+select if the door you're using is scaled in Unity3D units. If you were to create
+a cube in Unity and put in the same dimensions as your door and the cube and
+the door take up exactly the same space, your door is is in Unity 3D Units.</p>
+<p>Next you'll need to select the pivot position. Is the pivot of the door centered
+or is it correctly positioned where the hinge should be? To see where
+the pivot of your door is, set the tool handle in Unity to be active at the object's
+pivot point.</p>
+<p><img alt="Door Settings" src="../img/doorsettings.png" /></p>
+<p>After that, set the hinge position of the door. Should it be at the left side or the right side of the door?</p>
+<h2 id="rotation-settings"><strong>Rotation Settings</strong></h2>
+<p>In the rotation tab you can set if the performed rotation should always take the shortest
+way or if it should take the default way. You can also pick the angle convention. More information
+on this will be added.
+Lastly you have a 'reset on leave' option. This will make it so that when you leave
+a trigger zone, the door will reset to its original position.</p>
+<p><img alt="Rotation Settings" src="../img/rotationsettings.png" /></p>
+<p>The next thing you'll need to look at is the rotation timeline. This is one of the
+most powerful elements in Doors+.</p>
+<p><img alt="Rotation Timeline" src="../img/rotationtimeline.png" /></p>
+<p>The rotation timeline controls all of your rotations chronologically. You can add single rotations,
+looped rotations or swing rotations. These rotations will play chronologically from top to bottom.</p>
+<p>Once you've added a rotation, you can change its settings. First you can set both the
+initial and the final angle. Next you can set the speed of rotation. This speed is controlled
+by the rotation curve. For looped rotations you can also set how many times
+the door can be moved. For swing rotations you have 3 rotation states.</p>
+<h2 id="rotation-curves"><strong>Rotation Curves</strong></h2>
+<p>The rotation curve can control how the speed of the door changes overtime.
+A steeper curve will mean that the door will rotate faster and a less steep curve
+means that the door will rotate slower. Make sure that your curve
+starts at 0 and ends at 1 on the x axis.</p>
+<p><img alt="Rotation Curve" src="../img/rotationcurve.png" /></p>
                 
                   
                 

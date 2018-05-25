@@ -77,23 +77,28 @@
         },
         {
             "location": "/doorrotation/",
-            "text": "Door Rotation\n\n\nAngle Settings\n\n\nSpeed Curves",
+            "text": "Door Rotation\n\n\nThe rotation component of the door is where you actually control what rotations the door has to perform. In the component\nitself, you have 2 tabs. You have a 'Door' tab and a 'Rotations' tab.\n\n\n\n\nDoor Tab\n\n\nIn the door tab you have the options to set the door parameters. First you'll have to\nselect if the door you're using is scaled in Unity3D units. If you were to create\na cube in Unity and put in the same dimensions as your door and the cube and\nthe door take up exactly the same space, your door is is in Unity 3D Units.\n\n\nNext you'll need to select the pivot position. Is the pivot of the door centered\nor is it correctly positioned where the hinge should be? To see where\nthe pivot of your door is, set the tool handle in Unity to be active at the object's\npivot point.\n\n\n\n\nAfter that, set the hinge position of the door. Should it be at the left side or the right side of the door?\n\n\nRotation Settings\n\n\nIn the rotation tab you can set if the performed rotation should always take the shortest\nway or if it should take the default way. You can also pick the angle convention. More information\non this will be added.\nLastly you have a 'reset on leave' option. This will make it so that when you leave\na trigger zone, the door will reset to its original position.\n\n\n\n\nThe next thing you'll need to look at is the rotation timeline. This is one of the\nmost powerful elements in Doors+.\n\n\n\n\nThe rotation timeline controls all of your rotations chronologically. You can add single rotations,\nlooped rotations or swing rotations. These rotations will play chronologically from top to bottom.\n\n\nOnce you've added a rotation, you can change its settings. First you can set both the\ninitial and the final angle. Next you can set the speed of rotation. This speed is controlled\nby the rotation curve. For looped rotations you can also set how many times\nthe door can be moved. For swing rotations you have 3 rotation states.\n\n\nRotation Curves\n\n\nThe rotation curve can control how the speed of the door changes overtime.\nA steeper curve will mean that the door will rotate faster and a less steep curve\nmeans that the door will rotate slower. Make sure that your curve\nstarts at 0 and ends at 1 on the x axis.",
             "title": "Rotations"
         },
         {
             "location": "/doorrotation/#door-rotation",
-            "text": "",
+            "text": "The rotation component of the door is where you actually control what rotations the door has to perform. In the component\nitself, you have 2 tabs. You have a 'Door' tab and a 'Rotations' tab.",
             "title": "Door Rotation"
         },
         {
-            "location": "/doorrotation/#angle-settings",
-            "text": "",
-            "title": "Angle Settings"
+            "location": "/doorrotation/#door-tab",
+            "text": "In the door tab you have the options to set the door parameters. First you'll have to\nselect if the door you're using is scaled in Unity3D units. If you were to create\na cube in Unity and put in the same dimensions as your door and the cube and\nthe door take up exactly the same space, your door is is in Unity 3D Units.  Next you'll need to select the pivot position. Is the pivot of the door centered\nor is it correctly positioned where the hinge should be? To see where\nthe pivot of your door is, set the tool handle in Unity to be active at the object's\npivot point.   After that, set the hinge position of the door. Should it be at the left side or the right side of the door?",
+            "title": "Door Tab"
         },
         {
-            "location": "/doorrotation/#speed-curves",
-            "text": "",
-            "title": "Speed Curves"
+            "location": "/doorrotation/#rotation-settings",
+            "text": "In the rotation tab you can set if the performed rotation should always take the shortest\nway or if it should take the default way. You can also pick the angle convention. More information\non this will be added.\nLastly you have a 'reset on leave' option. This will make it so that when you leave\na trigger zone, the door will reset to its original position.   The next thing you'll need to look at is the rotation timeline. This is one of the\nmost powerful elements in Doors+.   The rotation timeline controls all of your rotations chronologically. You can add single rotations,\nlooped rotations or swing rotations. These rotations will play chronologically from top to bottom.  Once you've added a rotation, you can change its settings. First you can set both the\ninitial and the final angle. Next you can set the speed of rotation. This speed is controlled\nby the rotation curve. For looped rotations you can also set how many times\nthe door can be moved. For swing rotations you have 3 rotation states.",
+            "title": "Rotation Settings"
+        },
+        {
+            "location": "/doorrotation/#rotation-curves",
+            "text": "The rotation curve can control how the speed of the door changes overtime.\nA steeper curve will mean that the door will rotate faster and a less steep curve\nmeans that the door will rotate slower. Make sure that your curve\nstarts at 0 and ends at 1 on the x axis.",
+            "title": "Rotation Curves"
         },
         {
             "location": "/doortrigger/",
@@ -132,13 +137,18 @@
         },
         {
             "location": "/doorsound/",
-            "text": "Door Sound\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\nif\n \n(\nAngleConvention\n \n==\n \n0\n)\n \n// Alex's Door System Convention\n\n\n{\n\n    \nSwingStart\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \n-\nCurrentRotationBlock\n.\nFrontAngle\n,\n \n0\n);\n\n    \nSwingMid\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \n-\nCurrentRotationBlock\n.\nMiddleAngle\n,\n \n0\n);\n\n    \nSwingEnd\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \n-\nCurrentRotationBlock\n.\nBackAngle\n,\n \n0\n);\n\n\n}\n\n\n\nelse\n \nif\n \n(\nAngleConvention\n \n==\n \n1\n)\n \n// Unity Convention\n\n\n{\n\n    \nSwingStart\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \nCurrentRotationBlock\n.\nFrontAngle\n,\n \n0\n);\n\n    \nSwingMid\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \nCurrentRotationBlock\n.\nMiddleAngle\n,\n \n0\n);\n\n    \nSwingEnd\n \n=\n \nQuaternion\n.\nEuler\n(\n0\n,\n \nCurrentRotationBlock\n.\nBackAngle\n,\n \n0\n);\n\n\n}",
+            "text": "Door Sound\n\n\nYou can easily add audio clips that play along with your rotations.\nGot to the rotation component on your door, and click on the 'add audio component' to get sounds working\nin your game.\n\n\n\n\nYou'll see a new audio interface that's divided into three tabs. Open, close and locked.\n\n\nThe open tab will control audio clips that get played when you're doing a single rotation, the first rotation of a looped rotation\nor the primary rotation of a swing rotation.\n\n\nThe close tab will control audio clips that get played when you're doing the second rotation of a looped rotation\nor the secondary rotation of a swing rotation.\n\n\nThe locked tab will control audio clips that get played when the player attempted to open/close the door but it failed.\n\n\n\n\nYou can add in clips that get played at the start of the rotation and clips that\nget played at the end of the rotation.\n\n\nEvery audio clip has several parameters.\n\n\nAudio Parameters\n\n\n\n\n\n\n\n\nParameter\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nClip\n\n\nThe audio clip that will get played.\n\n\n\n\n\n\nVolume\n\n\nThe volume of the played audio clip.\n\n\n\n\n\n\nPlayback Speed\n\n\nThe playback speed of the audio clip. Equal to the pitch.\n\n\n\n\n\n\nDelay\n\n\nA delay on the audio clip to get them to play at exactly the right time.",
             "title": "Door Sound"
         },
         {
             "location": "/doorsound/#door-sound",
-            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13 if   ( AngleConvention   ==   0 )   // Alex's Door System Convention  { \n     SwingStart   =   Quaternion . Euler ( 0 ,   - CurrentRotationBlock . FrontAngle ,   0 ); \n     SwingMid   =   Quaternion . Euler ( 0 ,   - CurrentRotationBlock . MiddleAngle ,   0 ); \n     SwingEnd   =   Quaternion . Euler ( 0 ,   - CurrentRotationBlock . BackAngle ,   0 );  }  else   if   ( AngleConvention   ==   1 )   // Unity Convention  { \n     SwingStart   =   Quaternion . Euler ( 0 ,   CurrentRotationBlock . FrontAngle ,   0 ); \n     SwingMid   =   Quaternion . Euler ( 0 ,   CurrentRotationBlock . MiddleAngle ,   0 ); \n     SwingEnd   =   Quaternion . Euler ( 0 ,   CurrentRotationBlock . BackAngle ,   0 );  }",
+            "text": "You can easily add audio clips that play along with your rotations.\nGot to the rotation component on your door, and click on the 'add audio component' to get sounds working\nin your game.   You'll see a new audio interface that's divided into three tabs. Open, close and locked.  The open tab will control audio clips that get played when you're doing a single rotation, the first rotation of a looped rotation\nor the primary rotation of a swing rotation.  The close tab will control audio clips that get played when you're doing the second rotation of a looped rotation\nor the secondary rotation of a swing rotation.  The locked tab will control audio clips that get played when the player attempted to open/close the door but it failed.   You can add in clips that get played at the start of the rotation and clips that\nget played at the end of the rotation.  Every audio clip has several parameters.",
             "title": "Door Sound"
+        },
+        {
+            "location": "/doorsound/#audio-parameters",
+            "text": "Parameter  Description      Clip  The audio clip that will get played.    Volume  The volume of the played audio clip.    Playback Speed  The playback speed of the audio clip. Equal to the pitch.    Delay  A delay on the audio clip to get them to play at exactly the right time.",
+            "title": "Audio Parameters"
         },
         {
             "location": "/faq/",

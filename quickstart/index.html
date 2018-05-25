@@ -366,12 +366,12 @@ Tools&gt;Alex's Door System&gt;Create Door tag. Alternatively you could manually
 <p>Now that we're done setting up the asset, we can actually start creating some doors!
 We will first create a player in our scene. Make sure that the player can move around and look around
 in your scene. If you want to, you can use the player prefab that is included in the asset. Notice that the
-player has the <a href="https://alexanderameye.github.io/doordetection/">door detection component</a> attached to it. If
+player has the <a href="https://alexdoorsystem.github.io/doordetection/">door detection component</a> attached to it. If
 you are using your own player controller, make sure to add this door detection component as well.
 In the inspector of the detection component, make sure that the reach variable is set to 5.</p>
 <p><img alt="Player Prefab" src="../img/player_prefab.png" /></p>
 <p>Now our player is done and we can start creating a door! Just create a basic door shape out of a default cube and place it in your scene.
-After you have a created a door that you're happy with, add the <a href="https://alexanderameye.github.io/doorrotation/">door rotation component</a> to it. The hierarchy structure
+After you have a created a door that you're happy with, add the <a href="https://alexdoorsystem.github.io/doorrotation/">door rotation component</a> to it. The hierarchy structure
 around your door will automatically be changed.</p>
 <p><img alt="The door rotation component" src="../img/door.png" /></p>
 <p>Take a look at the door rotation component. We will be adding a single rotation to it by pressing the green 'plus' button on
@@ -379,7 +379,7 @@ the Rotation Timeline. After we've added a rotation block, there will appear a b
 your door will change again. Let's set the values of the rotation block to an initial angle of 0, a final angle of 90, a speed of 2 and
 a smooth ease-in ease-out curve.</p>
 <p><img alt="The rotation timeline" src="../img/rotation_timeline.png" /></p>
-<p>Now that our rotation itself is set up, we will take a look at that blue zone that just spawned. This zone is a <a href="https://alexanderameye.github.io/doortrigger/">trigger zone</a>
+<p>Now that our rotation itself is set up, we will take a look at that blue zone that just spawned. This zone is a <a href="https://alexdoorsystem.github.io/doortrigger/">trigger zone</a>
 and it will control our rotation. Select the 'Move Trigger' in the hierarchy 'and take a look at the inspector window.
 We will ask for our player to press "E" in order to rotate the door so toggle 'Pressed' and put the letter 'e' in the field that appears.
 If you'd like to you can resize the trigger zone a bit so it's a bit bigger.</p>

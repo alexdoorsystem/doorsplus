@@ -228,9 +228,36 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Door Sound
+      </label>
+    
     <a href="./" title="Door Sound" class="md-nav__link md-nav__link--active">
       Door Sound
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#audio-parameters" title="Audio Parameters" class="md-nav__link">
+    Audio Parameters
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -288,6 +315,20 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#audio-parameters" title="Audio Parameters" class="md-nav__link">
+    Audio Parameters
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -300,33 +341,47 @@
                 
                 
                 <h1 id="door-sound"><strong>Door Sound</strong></h1>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">AngleConvention</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="c1">// Alex&#39;s Door System Convention</span>
-<span class="p">{</span>
-    <span class="n">SwingStart</span> <span class="p">=</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">Euler</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="p">-</span><span class="n">CurrentRotationBlock</span><span class="p">.</span><span class="n">FrontAngle</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
-    <span class="n">SwingMid</span> <span class="p">=</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">Euler</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="p">-</span><span class="n">CurrentRotationBlock</span><span class="p">.</span><span class="n">MiddleAngle</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
-    <span class="n">SwingEnd</span> <span class="p">=</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">Euler</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="p">-</span><span class="n">CurrentRotationBlock</span><span class="p">.</span><span class="n">BackAngle</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">AngleConvention</span> <span class="p">==</span> <span class="m">1</span><span class="p">)</span> <span class="c1">// Unity Convention</span>
-<span class="p">{</span>
-    <span class="n">SwingStart</span> <span class="p">=</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">Euler</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">CurrentRotationBlock</span><span class="p">.</span><span class="n">FrontAngle</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
-    <span class="n">SwingMid</span> <span class="p">=</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">Euler</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">CurrentRotationBlock</span><span class="p">.</span><span class="n">MiddleAngle</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
-    <span class="n">SwingEnd</span> <span class="p">=</span> <span class="n">Quaternion</span><span class="p">.</span><span class="n">Euler</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">CurrentRotationBlock</span><span class="p">.</span><span class="n">BackAngle</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
+<p>You can easily add audio clips that play along with your rotations.
+Got to the rotation component on your door, and click on the 'add audio component' to get sounds working
+in your game.</p>
+<p><img alt="Audio Component" src="../img/addaudiocomponent.png" /></p>
+<p>You'll see a new audio interface that's divided into three tabs. Open, close and locked.</p>
+<p>The open tab will control audio clips that get played when you're doing a single rotation, the first rotation of a looped rotation
+or the primary rotation of a swing rotation.</p>
+<p>The close tab will control audio clips that get played when you're doing the second rotation of a looped rotation
+or the secondary rotation of a swing rotation.</p>
+<p>The locked tab will control audio clips that get played when the player attempted to open/close the door but it failed.</p>
+<p><img alt="Audio Component" src="../img/soundcomponent.png" /></p>
+<p>You can add in clips that get played at the start of the rotation and clips that
+get played at the end of the rotation.</p>
+<p>Every audio clip has several parameters.</p>
+<h2 id="audio-parameters"><strong>Audio Parameters</strong></h2>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Clip</td>
+<td align="left">The audio clip that will get played.</td>
+</tr>
+<tr>
+<td align="left">Volume</td>
+<td align="left">The volume of the played audio clip.</td>
+</tr>
+<tr>
+<td align="left">Playback Speed</td>
+<td align="left">The playback speed of the audio clip. Equal to the pitch.</td>
+</tr>
+<tr>
+<td align="left">Delay</td>
+<td align="left">A delay on the audio clip to get them to play at exactly the right time.</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
