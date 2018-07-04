@@ -32,7 +32,7 @@
     
     
       
-        <title>Rotations - Alex's Door System Documentation</title>
+        <title>Rotations - Doors+</title>
       
     
     
@@ -69,7 +69,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Alex's Door System Documentation" class="md-header-nav__button md-logo">
+        <a href=".." title="Doors+" class="md-header-nav__button md-logo">
           
             <i class="md-icon">home</i>
           
@@ -137,7 +137,7 @@
         <i class="md-icon">home</i>
       
     </span>
-    Alex's Door System Documentation
+    Doors+
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -282,30 +282,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../faq/" title="FAQ" class="md-nav__link">
-      FAQ
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../license/" title="Third-Party Licenses" class="md-nav__link">
-      Third-Party Licenses
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
     <a href="../support/" title="Support and Contact" class="md-nav__link">
       Support and Contact
     </a>
@@ -385,25 +361,29 @@ pivot point.</p>
 <p>After that, set the hinge position of the door. Should it be at the left side or the right side of the door?</p>
 <h2 id="rotation-settings"><strong>Rotation Settings</strong></h2>
 <p>In the rotation tab you can set if the performed rotation should always take the shortest
-way or if it should take the default way. You can also pick the angle convention. More information
-on this will be added.
+way or if it should take the default way. You can also pick the angle convention. The angle
+convention basically dictates if degrees should be counted clockwise or counterclockwise.
 Lastly you have a 'reset on leave' option. This will make it so that when you leave
-a trigger zone, the door will reset to its original position.</p>
+a trigger zone, the door will reset to its original position. This only works when using single rotations.</p>
 <p><img alt="Rotation Settings" src="../img/rotationsettings.png" /></p>
 <p>The next thing you'll need to look at is the rotation timeline. This is one of the
-most powerful elements in Doors+.</p>
+most powerful components in Doors+.</p>
 <p><img alt="Rotation Timeline" src="../img/rotationtimeline.png" /></p>
 <p>The rotation timeline controls all of your rotations chronologically. You can add single rotations,
 looped rotations or swing rotations. These rotations will play chronologically from top to bottom.</p>
-<p>Once you've added a rotation, you can change its settings. First you can set both the
-initial and the final angle. Next you can set the speed of rotation. This speed is controlled
-by the rotation curve. For looped rotations you can also set how many times
-the door can be moved. For swing rotations you have 3 rotation states.</p>
+<p>Once you've added a rotation, you can change its settings. For all the rotations you can set both the
+initial angle, the final angle and the speed of the rotation.</p>
+<p>Single rotations are rotations that just get performed once. Looped rotations are rotations that can
+be repeated for a number of time. Lastly swing rotations are rotations that know 3 states. Let's
+say the 3 states are -90°, 0° and 90°. The door then has the ability to rotate differently depending
+on whether the player is standing in front of the door or on the other side.
+This type of door is commonly used in several games such as Fortnite and Dishonered.</p>
 <h2 id="rotation-curves"><strong>Rotation Curves</strong></h2>
-<p>The rotation curve can control how the speed of the door changes overtime.
-A steeper curve will mean that the door will rotate faster and a less steep curve
+<p>The rotation curve can control how the speed of the door will change overtime. You can pick curves
+between presets such as linear, smoothstep, exponential,... or you can create your own custom curve.</p>
+<p>A steeper curve will mean that the door will rotate faster and a less steep curve
 means that the door will rotate slower. Make sure that your curve
-starts at 0 and ends at 1 on the x axis.</p>
+starts at 0 and ends at 1 on the x axis and y axis.</p>
 <p><img alt="Rotation Curve" src="../img/rotationcurve.png" /></p>
                 
                   
